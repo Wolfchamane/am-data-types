@@ -1,0 +1,15 @@
+{
+    "name": "am-data-types",
+    "version": "0.0.0",
+    "author": "Arturo Martínez <arturo.martinez@wolfchamane.com>",
+    "license": "MIT",
+    "scripts": {
+        "test": "istanbul cover --root src --include-all-sources --print both --report html -x test.js test.js"
+    },
+    "dependencies": {
+        "am-factory": "^0.1.0"
+    },
+    "devDependencies": {
+        "istanbul": "^0.4.5"
+    }
+}
