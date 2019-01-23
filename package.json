@@ -1,6 +1,6 @@
 {
     "name": "am-data-types",
-    "version": "0.0.0",
+    "version": "0.1.0",
     "author": "Arturo Martínez <arturo.martinez@wolfchamane.com>",
     "license": "MIT",
     "scripts": {
