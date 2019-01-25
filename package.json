@@ -3,11 +3,16 @@
     "version": "0.1.0",
     "author": "Arturo Martínez <arturo.martinez@wolfchamane.com>",
     "license": "MIT",
+    "description": "Data types models for any proyect",
+    "keywords": [
+        "es6", "javascript", "models", "data", "types"
+    ],
+    "main": "index.mjs",
     "scripts": {
         "test": "NODE_ENV=testing node node_modules/am-tools/scripts/test.js --no-cache"
     },
     "dependencies": {
-        "am-factory": "^0.2.0",
-        "am-tools": "^0.1.1"
+        "am-factory": "^0.2.1",
+        "am-tools": "^0.1.2"
     }
 }

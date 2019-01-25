@@ -13,6 +13,7 @@ export default class AmDataTypesBase extends AmFactory
      * @constructor
      * @param       {*} value Initial value
      */
+    /* istanbul ignore next */
     constructor(value = null)
     {
         super();

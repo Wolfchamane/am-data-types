@@ -37,6 +37,7 @@ export default class AmDataTypesDate extends AmDataTypesBase
     {
         if (!(value instanceof Date))
         {
+            /* istanbul ignore next */
             switch (typeof value)
             {
                 case 'number':
@@ -50,6 +51,7 @@ export default class AmDataTypesDate extends AmDataTypesBase
             }
         }
 
+        /* istanbul ignore next */
         return super._parseValue(value);
     }
 
@@ -105,7 +107,8 @@ export default class AmDataTypesDate extends AmDataTypesBase
      */
     toString()
     {
-        return this.value
+        /* istanbul ignore next */
+        return this.value instanceof Date
             ? this.format
                 ? this._formatDate()
                 : this.value.toISOString()
