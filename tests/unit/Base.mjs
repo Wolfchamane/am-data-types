@@ -62,7 +62,36 @@ describe('AmDataTypesBase - methods', () =>
 {
     let sut;
     beforeEach(() => sut = new AmDataTypesBase());
+
     describe('_parseValue', () =>
-        it('By default, returns "null"', () =>
-            expect(sut._parseValue()).toBeNull()));
+        it('By default, returns "undefined"', () =>
+            expect(sut._parseValue()).toBe(undefined)));
+
+    describe('toString', () =>
+    {
+        it('By default, returns text "null"', () =>
+            expect(sut.toString()).toBe('null'));
+
+        [
+            {},
+            [],
+            undefined,
+            null,
+            false,
+            true,
+            0.00
+            -0.00,
+            1
+        ].forEach(
+            value =>
+            {
+                it(`Returns the string representation of "${value}"`, () =>
+                {
+                    const expected = String(value);
+                    sut.value = value;
+                    expect(sut.toString()).toEqual(expected);
+                });
+            }
+        )
+    });
 });

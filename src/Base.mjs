@@ -33,7 +33,10 @@ export default class AmDataTypesBase extends AmFactory
             value           : null
         });
 
-        this.value = value;
+        if (value)
+        {
+            this.value = value;
+        }
     }
 
     /**
@@ -66,9 +69,20 @@ export default class AmDataTypesBase extends AmFactory
      * @return  {*} Value parsed
      * @private
      */
-    _parseValue(value = null)
+    _parseValue(value)
     {
         return value;
+    }
+
+    /**
+     * Returns the string representation of current value
+     *
+     * @method  toString
+     * @return  {String}    Current value as string
+     */
+    toString()
+    {
+        return String(this.value);
     }
 }
 
