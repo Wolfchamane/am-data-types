@@ -16,6 +16,7 @@ $ npm i --save am-data-types
 |:--- |:--- |
 | `Date` | Model to operate with Date values |
 | `Number` | Model to operate with Numbers |
+| `Boolean` | Model to operate with Booleans |
 
 ## Creation
 

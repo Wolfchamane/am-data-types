@@ -1,16 +1,5 @@
+import { leftPad } from 'am-tools/src/string';
 import AmDataTypesBase from './Base';
-
-/* istanbul ignore next */
-// @todo move to am-tools
-const _leftPad = (value = '') =>
-{
-    if (typeof value !== 'string')
-    {
-        value = value.toString();
-    }
-
-    return `00${value}`.substr(value.length);
-};
 
 /**
  * Data type class model for Dates
@@ -79,19 +68,19 @@ export default class AmDataTypesDate extends AmDataTypesBase
                             value = date.getFullYear();
                             break;
                         case 'MM':
-                            value = _leftPad(date.getMonth() + 1);
+                            value = leftPad(String(date.getMonth() + 1));
                             break;
                         case 'dd':
-                            value = _leftPad(date.getDate());
+                            value = leftPad(date.getDate().toString());
                             break;
                         case 'hh':
-                            value = _leftPad(date.getHours());
+                            value = leftPad(date.getHours().toString());
                             break;
                         case 'mm':
-                            value = _leftPad(date.getMinutes());
+                            value = leftPad(date.getMinutes().toString());
                             break;
                         case 'ss':
-                            value = _leftPad(date.getSeconds());
+                            value = leftPad(date.getSeconds().toString());
                             break;
                     }
 
