@@ -14,9 +14,10 @@ $ npm i --save am-data-types
 
 | Type | Description |
 |:--- |:--- |
-| `Date` | Model to operate with Date values |
-| `Number` | Model to operate with Numbers |
 | `Boolean` | Model to operate with Booleans |
+| `Date` | Model to operate with Date values |
+| `Money` | Model to operate with money values |
+| `Number` | Model to operate with Numbers |
 
 ## Creation
 
